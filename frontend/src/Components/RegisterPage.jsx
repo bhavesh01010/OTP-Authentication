@@ -4,13 +4,13 @@ import LeftImg from "../assets/leftSide.webp";
 import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [registerData, setRegisterData] = useState({
     name: "",
     userName: "",
     email: "",
     age: "",
-    gender: "",
+    gender: "male",
     phoneNumber: "",
     address: "",
   });
@@ -22,7 +22,8 @@ const RegisterPage = () => {
   async function handleForm(e) {
     e.preventDefault();
     try {
-      const resp = await fetch("https:localhost:8000", {
+      console.log(registerData);
+      const resp = await fetch("http://localhost:8800/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,10 +31,22 @@ const RegisterPage = () => {
         body: JSON.stringify(registerData),
       });
       const data = await resp.json();
-      if(data.ok){
-        navigate('/verifyOTP')
-      }else{
-        alert(data.message)
+      console.log(data);
+      if (data.status === "success") {
+        alert(data.message);
+        navigate("/verifyOTP");
+        
+        setRegisterData({
+          name: "",
+          userName: "",
+          email: "",
+          age: "",
+          gender: "male",
+          phoneNumber: "",
+          address: "",
+        });
+      } else {
+        alert(data.message);
       }
     } catch (error) {
       console.log(error);
@@ -60,7 +73,7 @@ const RegisterPage = () => {
             onChange={handleChange}
           />
 
-          <label htmlFor="userName">Full Name</label>
+          <label htmlFor="userName">User Name</label>
           <input
             name="userName"
             placeholder="Enter userName..."
@@ -85,7 +98,7 @@ const RegisterPage = () => {
             onChange={handleChange}
           />
           <label htmlFor="gender">Gender</label>
-          <div class="gender">
+          {/* <div className="gender">
             <span>Male</span>
             <input
               name="gender"
@@ -95,7 +108,7 @@ const RegisterPage = () => {
               onChange={handleChange}
             />
           </div>
-          <div class="gender">
+          <div className="gender">
             <span>Female</span>
             <input
               name="gender"
@@ -104,7 +117,7 @@ const RegisterPage = () => {
               value={registerData.gender}
               onChange={handleChange}
             />
-          </div>
+          </div> */}
           <label htmlFor="phoneNumber">Phone Number</label>
           <input
             name="phoneNumber"
@@ -121,7 +134,7 @@ const RegisterPage = () => {
             value={registerData.address}
             onChange={handleChange}
           />
-          <button type="submit"> Submit</button>
+          <button type="submit">Verify Email</button>
         </form>
       </div>
     </div>
