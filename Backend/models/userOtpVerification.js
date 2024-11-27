@@ -3,7 +3,6 @@ const mongoose = require('mongoose')
 const userOtpVerificationSchema = mongoose.Schema({
     userName: {
         type: String,
-        unique: true,
         required: true
     },
     otp: {
@@ -11,11 +10,11 @@ const userOtpVerificationSchema = mongoose.Schema({
         required: true
     },
     createdAt: {
-        type: Date,
+        type: String,
         required: true
     },
     expiresAt: {
-        type: Date,
+        type: String,
         required: true
     }
 })
