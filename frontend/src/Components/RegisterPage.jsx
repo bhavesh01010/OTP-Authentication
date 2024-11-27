@@ -34,7 +34,9 @@ const RegisterPage = () => {
       console.log(data);
       if (data.status === "success") {
         alert(data.message);
-        navigate("/verifyOTP");
+        navigate("/verifyOTP",{
+          state:{userName:registerData.userName},
+        });
         
         setRegisterData({
           name: "",

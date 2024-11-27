@@ -1,5 +1,5 @@
 .verifyOTP::before {
-  background: url("https://images.unsplash.com/photo-1576190348129-d158fb6c67fd?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+  background: url("https://wallpapercave.com/wp/wp2356164.jpg")
     no-repeat center center;
   content: "";
   position: absolute;
@@ -22,7 +22,8 @@
   transform: translate(-50%, -50%);
   width: 40%;
   height: 300px;
-  border: 2px solid black;
+  border: 3px solid black;
+  border-radius: 10px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   padding: 50px;
@@ -36,6 +37,7 @@
     padding: 5px;
     width: 50px;
     height: 50px;
+    text-align: center;
     gap: 5px;
     outline: none;
     border: none;

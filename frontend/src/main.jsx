@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import RegisterPage from "./Components/RegisterPage.jsx";
 import LoginPage from "./Components/LoginPage.jsx";
 import VerifyOTP from "./Components/VerifyOTP.jsx";
+import Home from "./Components/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "verifyOTP",
     element: <VerifyOTP />,
+  },
+  {
+    path: "home",
+    element: <Home />,
   },
 ]);
 
