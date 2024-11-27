@@ -9,10 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@devmehq/email-validator-js": "^1.0.19",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "deep-email-validator": "^0.1.21",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mongoose": "^8.8.3",
+    "nodemailer": "^6.9.16",
     "nodemon": "^3.1.7"
   }
 }
