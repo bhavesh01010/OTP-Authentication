@@ -1,0 +1,63 @@
+.verifyOTP::before {
+  background: url("https://images.unsplash.com/photo-1576190348129-d158fb6c67fd?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+.verifyOTP {
+    
+}
+.verifyOTP .main-box {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 300px;
+  border: 2px solid black;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.main-box input{
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    gap: 5px;
+    outline: none;
+    border: none;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.main-box .submit-btn{
+    width: 140px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    background-color: #121619;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.main-box .resend-btn{
+    background: transparent;
+    border: none;
+    color: rgb(133, 244, 113);
+    font-size: 15px;
+    cursor: pointer;
+}
