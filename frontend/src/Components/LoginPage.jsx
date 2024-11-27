@@ -17,7 +17,7 @@ const LoginPage = () => {
   async function handleForm(e){
     e.preventDefault();
     console.log(formData)
-    const resp=await fetch('http://localhost:8800',{
+    const resp=await fetch('http://localhost:8800/login',{
       method:"POST",
       headers: {
         "Content-Type": "application/json",
